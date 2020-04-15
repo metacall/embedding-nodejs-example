@@ -29,7 +29,7 @@ LABEL copyright.name="Vicente Eduardo Ferrer Garcia" \
 
 # Install dependencies
 RUN apt-get update \
-	&& apt-get install -y --no-install-recommends build-essential cmake git
+	&& apt-get install -y --no-install-recommends build-essential cmake git nodejs
 
 # Set working directory to home
 WORKDIR ${HOME}
