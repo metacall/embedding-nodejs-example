@@ -31,12 +31,12 @@ static int cleanup(int code)
 	return code;
 }
 
-int sum(int a, int b)
+int sum(double a, double b)
 {
 	// Parameters to be passed to the sum function
 	void * args[] =
 	{
-		metacall_value_create_int(a), metacall_value_create_int(b)
+		metacall_value_create_double(a), metacall_value_create_double(b)
 	};
 
 	void * ret = NULL;
@@ -55,7 +55,7 @@ int sum(int a, int b)
 		return 1;
 	}
 
-	printf("Function sum returned: %d\n", metacall_value_to_int(ret));
+	printf("Function sum returned: %f\n", metacall_value_to_double(ret));
 
 	// Clean up return value
 	metacall_value_destroy(ret);
