@@ -29,21 +29,24 @@ LABEL copyright.name="Vicente Eduardo Ferrer Garcia" \
 
 # Install dependencies
 RUN apt-get update \
-	&& apt-get install -y --no-install-recommends build-essential cmake git nodejs
+	&& apt-get install -y --no-install-recommends \
+		build-essential \
+		cmake \
+		ca-certificates \
+		git \
+		nodejs \
+		python2.7
 
 # Set working directory to home
-WORKDIR ${HOME}
+WORKDIR /root
 
-# Copy sources
-COPY CMakeLists.txt main.c script.js ./
-
-# Clone and build MetaCall
+# Clone and build the project
 RUN git clone https://github.com/metacall/embedding-nodejs-example.git \
 	&& mkdir embedding-nodejs-example/build && cd embedding-nodejs-example/build \
 	&& cmake .. \
 	&& cmake --build . --target install
 
-# Build and run the executable
+# Run the executable
 RUN export LOADER_LIBRARY_PATH="/usr/local/lib" \
 	&& export LOADER_SCRIPT_PATH="`pwd`" \
 	&& embedding_nodejs_example
