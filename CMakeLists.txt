@@ -26,6 +26,8 @@ set(METACALL_VERSION 0.1.53)
 
 include(ExternalProject)
 
+set(NODEJS_CMAKE_DEBUG ON PARENT_SCOPE)
+
 ExternalProject_Add(metacall
 	URL https://github.com/metacall/core/archive/v${METACALL_VERSION}.zip
 	PREFIX ${CMAKE_CURRENT_BINARY_DIR}/metacall-v${METACALL_VERSION}
