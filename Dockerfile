@@ -35,7 +35,9 @@ RUN apt-get update \
 		ca-certificates \
 		git \
 		nodejs \
-		python2.7
+		python2.7 \
+		unzip \
+	&& ln -s /usr/bin/python2.7 /usr/bin/python
 
 # Set working directory to home
 WORKDIR /root
