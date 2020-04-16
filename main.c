@@ -1,6 +1,6 @@
 /*
- *	MetaCall Embedding Matplotlib Example by Parra Studios
- *	An example of embedding matplotlib from Python into C/C++.
+ *	MetaCall Embedding NodeJS Example by Parra Studios
+ *	An example of embedding NodeJS into C/C++.
  *
  *	Copyright (C) 2016 - 2020 Vicente Eduardo Ferrer Garcia <vic798@gmail.com>
  *
