@@ -42,6 +42,9 @@ RUN apt-get update \
 # Set working directory to home
 WORKDIR /root
 
+# Force rebuild for latest version
+ARG DISABLE_CACHE=0
+
 # Clone and build the project
 RUN git clone https://github.com/metacall/embedding-nodejs-example.git \
 	&& mkdir embedding-nodejs-example/build && cd embedding-nodejs-example/build \
