@@ -36,6 +36,7 @@ RUN apt-get update \
 		git \
 		nodejs \
 		python2.7 \
+		node-gyp \
 		unzip \
 	&& ln -s /usr/bin/python2.7 /usr/bin/python
 
