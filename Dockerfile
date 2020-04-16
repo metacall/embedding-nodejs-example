@@ -37,8 +37,7 @@ RUN apt-get update \
 		nodejs \
 		python2.7 \
 		node-gyp \
-		unzip \
-	&& ln -s /usr/bin/python2.7 /usr/bin/python
+		unzip
 
 # Set working directory to home
 WORKDIR /root
