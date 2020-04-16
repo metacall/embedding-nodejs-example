@@ -2,6 +2,15 @@
 
 This example shows how to embed NodeJS into C/C++ source code. The instructions are focused on Linux but it can be ported to other platforms easily.
 
+## Dependencies
+
+For building this example you need NodeJS to be installed in the system (either 8.x and 10.x have been tested) and Python 2.7 available as `python` command (due to NodeJS build system dependency). For debian based distros:
+
+```bash
+sudo apt-get install -y --no-install-recommends nodejs python2.7 unzip
+alias python=/usr/bin/python2.7
+```
+
 ## Build
 
 Build the project, MetaCall dependency may require root permissions in order to be installed in the system.
