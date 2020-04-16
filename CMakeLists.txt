@@ -22,7 +22,7 @@ cmake_minimum_required(VERSION 2.8)
 project(metacall_embedding_nodejs_example)
 
 # Include MetaCall library as a dependency
-set(METACALL_VERSION 0.1.54)
+set(METACALL_VERSION 0.1.57)
 
 include(ExternalProject)
 
