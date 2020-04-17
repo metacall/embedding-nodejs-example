@@ -22,14 +22,12 @@ cmake_minimum_required(VERSION 2.8)
 project(metacall_embedding_nodejs_example)
 
 # Include MetaCall library as a dependency
-set(METACALL_VERSION 0.1.58)
+set(METACALL_VERSION 0.1.59)
 
 include(ExternalProject)
 
 ExternalProject_Add(metacall
-	# URL https://github.com/metacall/core/archive/v${METACALL_VERSION}.zip
-	GIT_REPOSITORY https://github.com/metacall/core.git
-	GIT_TAG origin/develop
+	URL https://github.com/metacall/core/archive/v${METACALL_VERSION}.zip
 	PREFIX ${CMAKE_CURRENT_BINARY_DIR}/metacall-v${METACALL_VERSION}
 	CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR> -DNODEJS_CMAKE_DEBUG=On -DOPTION_BUILD_LOADERS_NODE=On -DOPTION_BUILD_DETOURS=Off -DOPTION_BUILD_SCRIPTS=Off -DOPTION_BUILD_TESTS=Off -DOPTION_BUILD_EXAMPLES=Off
 	UPDATE_COMMAND ""
