@@ -27,7 +27,9 @@ set(METACALL_VERSION 0.1.58)
 include(ExternalProject)
 
 ExternalProject_Add(metacall
-	URL https://github.com/metacall/core/archive/v${METACALL_VERSION}.zip
+	# URL https://github.com/metacall/core/archive/v${METACALL_VERSION}.zip
+	GIT_URL https://github.com/metacall/core.git
+	GIT_TAG develop
 	PREFIX ${CMAKE_CURRENT_BINARY_DIR}/metacall-v${METACALL_VERSION}
 	CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR> -DNODEJS_CMAKE_DEBUG=On -DOPTION_BUILD_LOADERS_NODE=On -DOPTION_BUILD_DETOURS=Off -DOPTION_BUILD_SCRIPTS=Off -DOPTION_BUILD_TESTS=Off -DOPTION_BUILD_EXAMPLES=Off
 	UPDATE_COMMAND ""
@@ -48,6 +50,8 @@ set_property(
 add_executable(embedding_nodejs_example main.c)
 
 target_link_libraries(embedding_nodejs_example libmetacall)
+
+target_include_directories(embedding_python_example PUBLIC ${CMAKE_INSTALL_PREFIX}/include)
 
 # Install main target
 install(TARGETS embedding_nodejs_example DESTINATION bin)
