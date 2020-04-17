@@ -35,6 +35,7 @@ RUN apt-get update \
 		ca-certificates \
 		git \
 		nodejs \
+		npm \
 		python2.7 \
 		node-gyp \
 		unzip
