@@ -28,8 +28,8 @@ include(ExternalProject)
 
 ExternalProject_Add(metacall
 	# URL https://github.com/metacall/core/archive/v${METACALL_VERSION}.zip
-	GIT_URL https://github.com/metacall/core.git
-	GIT_TAG develop
+	GIT_REPOSITORY https://github.com/metacall/core.git
+	GIT_TAG origin/develop
 	PREFIX ${CMAKE_CURRENT_BINARY_DIR}/metacall-v${METACALL_VERSION}
 	CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR> -DNODEJS_CMAKE_DEBUG=On -DOPTION_BUILD_LOADERS_NODE=On -DOPTION_BUILD_DETOURS=Off -DOPTION_BUILD_SCRIPTS=Off -DOPTION_BUILD_TESTS=Off -DOPTION_BUILD_EXAMPLES=Off
 	UPDATE_COMMAND ""
