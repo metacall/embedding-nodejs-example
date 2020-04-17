@@ -8,6 +8,7 @@ For building this example you need NodeJS to be installed in the system (either 
 
 ```bash
 sudo apt-get install -y --no-install-recommends build-essential cmake ca-certificates git nodejs npm python2.7 node-gyp unzip
+sudo npm install -g npm@latest
 alias python=/usr/bin/python2.7
 ```
 

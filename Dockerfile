@@ -38,7 +38,8 @@ RUN apt-get update \
 		npm \
 		python2.7 \
 		node-gyp \
-		unzip
+		unzip \
+	&& npm install -g npm@latest
 
 # Set working directory to home
 WORKDIR /root
