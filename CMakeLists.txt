@@ -51,7 +51,7 @@ add_executable(embedding_nodejs_example main.c)
 
 target_link_libraries(embedding_nodejs_example libmetacall)
 
-target_include_directories(embedding_python_example PUBLIC ${CMAKE_INSTALL_PREFIX}/include)
+target_include_directories(embedding_nodejs_example PUBLIC ${CMAKE_INSTALL_PREFIX}/include)
 
 # Install main target
 install(TARGETS embedding_nodejs_example DESTINATION bin)
