@@ -30,7 +30,7 @@ From project root directory, run the following commands:
 ```bash
 export LOADER_LIBRARY_PATH="/usr/local/lib"
 export LOADER_SCRIPT_PATH="`pwd`"
-embedding-nodejs-example
+./embedding-nodejs-example
 ```
 
 ## Docker
