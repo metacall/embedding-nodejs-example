@@ -53,10 +53,11 @@ RUN git clone https://github.com/metacall/embedding-nodejs-example.git \
 	&& cmake .. \
 	&& cmake --build . --target install
 
+# Env vars for MetaCall
 ENV LOADER_LIBRARY_PATH=/usr/local/lib \
 	LOADER_SCRIPT_PATH=/root/embedding-nodejs-example
 
-# Run the executable (Testing)
+# Run the executable (testing)
 RUN embedding_nodejs_example
 
 # Set up the entry point
